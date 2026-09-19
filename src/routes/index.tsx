@@ -31,26 +31,35 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Rudragiri Goswami | Mechanical Engineering Portfolio" },
+      { title: "Rudragiri Goswami - Engineering Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Rudragiri Goswami, mechanical engineering student at SVNIT Surat - projects, research, simulation, sustainable engineering, leadership, and competitions.",
+          "Mechanical Engineering student at SVNIT Surat exploring robotics, mechanical design, simulation, engineering research, and data analysis.",
       },
       {
         property: "og:title",
-        content: "Rudragiri Goswami | Mechanical Engineering Portfolio",
+        content: "Rudragiri Goswami - Engineering Portfolio",
       },
       {
         property: "og:description",
-        content:
-          "Mechanical engineering projects, research and data analysis, sustainable engineering, leadership, and competition work by Rudragiri Goswami.",
+        content: "Mechanical Engineering | Robotics | CAD & Simulation | Engineering Research",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://rudragiri-goswami-portfolio.vercel.app/" },
+      { property: "og:image", content: "https://rudragiri-goswami-portfolio.vercel.app/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Rudragiri Goswami - Engineering Portfolio" },
+      {
+        name: "twitter:description",
+        content: "Mechanical Engineering | Robotics | CAD & Simulation | Engineering Research",
+      },
+      { name: "twitter:image", content: "https://rudragiri-goswami-portfolio.vercel.app/og-image.png" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://rudragiri-goswami-portfolio.vercel.app/" }],
   }),
 });
 
