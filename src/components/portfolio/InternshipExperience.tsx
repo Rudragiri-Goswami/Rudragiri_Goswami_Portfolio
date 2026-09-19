@@ -637,6 +637,16 @@ export function ResearchAndInternshipExperience() {
           <DetailBlock title="Computational Outputs">
             <GraphCarousel />
           </DetailBlock>
+          <DetailBlock title="Technical Documentation">
+            <a
+              href="https://drive.google.com/file/d/1lLHOACjwFfkXJBp1fvmQDcigU-1QfJc_/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex bg-primary px-4 py-2 font-mono text-[11px] uppercase text-primary-foreground transition-opacity hover:opacity-85"
+            >
+              Document
+            </a>
+          </DetailBlock>
         </>
       ),
     },
