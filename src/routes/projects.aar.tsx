@@ -1,8 +1,10 @@
 import { DetailNavigation } from "@/components/portfolio/DetailNavigation";
 import type { ReactNode } from "react";
+import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CadViewer } from "@/components/portfolio/CadViewer";
 import { OrdinalText } from "@/components/portfolio/OrdinalText";
+import { LoadingImage } from "@/components/portfolio/LoadingImage";
 
 export const Route = createFileRoute("/projects/aar")({
   component: AarPage,
@@ -136,6 +138,66 @@ function Bullet({ children }: { children: ReactNode }) {
   );
 }
 
+function GujcostCertificate() {
+  const [enlarged, setEnlarged] = React.useState(false);
+  const src = "/images/certificates/gujcost_cft.jpg";
+  const driveUrl = "https://drive.google.com/file/d/1jJzlPoZ6q4pMHj40alLMNu5uCHXwj0TE/view?usp=drive_link";
+
+  return (
+    <>
+      <figure className="max-w-sm border border-border bg-secondary/30">
+        <button
+          type="button"
+          onClick={() => setEnlarged(true)}
+          className="block aspect-[4/3] w-full overflow-hidden"
+          aria-label="Enlarge GUJCOST certificate"
+        >
+          <LoadingImage
+            src={src}
+            alt="GUJCOST Robofest 5.0 certificate for AAR"
+            className="flex h-full w-full items-center justify-center"
+            imgClassName="h-full w-full object-contain"
+          />
+        </button>
+      </figure>
+
+      {enlarged && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="GUJCOST certificate"
+          className="fixed inset-0 z-[110] flex flex-col bg-background/95 p-4 backdrop-blur-sm sm:p-8"
+        >
+          <div className="flex justify-end gap-2">
+            <a
+              href={driveUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-border px-4 py-2 font-mono text-[11px] uppercase transition-colors hover:border-foreground"
+            >
+              Open in new tab
+            </a>
+            <button
+              type="button"
+              onClick={() => setEnlarged(false)}
+              className="border border-border px-4 py-2 font-mono text-[11px] uppercase transition-colors hover:border-foreground"
+            >
+              Close
+            </button>
+          </div>
+          <figure className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4">
+            <img
+              src={src}
+              alt="GUJCOST Robofest 5.0 certificate for AAR"
+              className="max-h-[75vh] max-w-full border border-border object-contain"
+            />
+          </figure>
+        </div>
+      )}
+    </>
+  );
+}
+
 function AarPage() {
   return (
     <div className="flex h-svh flex-col overflow-hidden bg-background font-display text-foreground selection:bg-primary selection:text-primary-foreground">
@@ -213,34 +275,39 @@ function AarPage() {
                 </article>
               ))}
             </div>
-
-            <div className="mt-6">
-              <p className="font-mono text-[10px] uppercase text-muted-foreground">
-                GUJCOST Certificate
-              </p>
-
-            </div>
           </Block>
 
-          <Block title="Technical Documentation">
-            <div className="grid gap-px border border-border bg-border sm:grid-cols-2">
-              {documents.map((document) => (
-                <article key={document.round} className="bg-background p-5 sm:p-6">
-                  <p className="font-mono text-[10px] uppercase text-muted-foreground">
-                    {document.round}
-                  </p>
-                  <a
-                    href={document.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-3 inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                  >
-                    DOCUMENT ↗
-                  </a>
-                </article>
-              ))}
+          <div className="grid gap-px border-t border-border pt-8 sm:grid-cols-2 sm:gap-10">
+            {/* Left column: Certification */}
+            <div>
+              <h2 className="section-kicker">Certification</h2>
+              <div className="mt-4">
+                <GujcostCertificate />
+              </div>
             </div>
-          </Block>
+
+            {/* Right column: Technical Documentation */}
+            <div>
+              <h2 className="section-kicker">Technical Documentation</h2>
+              <div className="mt-4 grid gap-px border border-border bg-border sm:grid-cols-2">
+                {documents.map((document) => (
+                  <article key={document.round} className="bg-background p-5 sm:p-6">
+                    <p className="font-mono text-[10px] uppercase text-muted-foreground">
+                      {document.round}
+                    </p>
+                    <a
+                      href={document.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      DOCUMENT ↗
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </main>

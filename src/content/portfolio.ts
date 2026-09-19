@@ -536,6 +536,8 @@ export type ShowcaseProject = {
     certificate?: GalleryImage;
     /** When set, clicking the certificate preview opens this URL (e.g. Google Drive) in a new tab. */
     certificateUrl?: string;
+    /** When true, the certificate column renders on the LEFT and achievements on the RIGHT. */
+    certificateFirst?: boolean;
     documentation?: { label: string; url: string; embedUrl?: string };
     /** External link (e.g. Google Drive) for a Completion/Participation certificate (CFT). */
     cft?: { label: string; url: string };
@@ -592,15 +594,26 @@ export const showcaseProjects: ShowcaseProject[] = [
         "Developed and presented the Robot-as-a-Service (RaaS) concept; SENTINEL reached the NIDHI-PRAYAS (DST) finalist stage at IIT Gandhinagar.",
       ],
       gallery: {
-        primary: { src: "/images/sentinel/S_ALPHA.jpg", caption: "SENTINEL-Alpha — The Soil Analyst", alt: "CAD render of SENTINEL-Alpha, the soil-analysis robot" },
+        primary: { src: "/images/sentinel/S_ALPHA.jpg", caption: "SENTINEL-Alpha - The Soil Analyst", alt: "CAD render of SENTINEL-Alpha, the soil-analysis robot" },
         supporting: [
-          { src: "/images/sentinel/S_BETA.png", caption: "SENTINEL-Beta — The Planter", alt: "CAD render of SENTINEL-Beta, the planting robot" },
+          { src: "/images/sentinel/S_BETA.png", caption: "SENTINEL-Beta - The Planter", alt: "CAD render of SENTINEL-Beta, the planting robot" },
         ],
       },
       galleryFit: "contain",
       galleryAfterContributions: true,
       showTechnicalTags: true,
-      achievements: [],
+      achievements: [
+        {
+          event: "NIDHI-PRAYAS (DST) Program, IIT Gandhinagar",
+          lines: ["Finalist"],
+        },
+      ],
+      certificate: {
+        src: "/images/certificates/samsung_cft.jpg",
+        caption: "Samsung CFT",
+        alt: "Samsung Certificate of participation for SENTINEL project",
+      },
+      certificateFirst: true,
     },
   },
   {
@@ -793,7 +806,7 @@ export const showcaseProjects: ShowcaseProject[] = [
           "https://drive.google.com/file/d/1j_mIGrRmKaWGbeXVyb1MYZqXDC9VWlet/preview",
       },
       cft: {
-        label: "CFT — Line Follower",
+        label: "CFT - Line Follower",
         url: "https://drive.google.com/file/d/1jXchj9yE7X4t8AADi3tHUPi_JV3pLDJo/view?usp=drive_link",
       },
 

@@ -425,6 +425,25 @@ export function ProjectCaseStudy({
             {(study.achievements.length > 0 || study.certificate) && (
             <Block title="Competition achievements">
               <div className="grid gap-6 lg:grid-cols-2">
+                {/* Certificate column — renders LEFT when certificateFirst, otherwise RIGHT */}
+                {study.certificate && study.certificateFirst && (
+                <div>
+                  <p className="font-mono text-[10px] uppercase text-muted-foreground">
+                    Certificate
+                  </p>
+                  <div className="mt-3">
+                    <ImageFrame
+                      image={study.certificate}
+                      ratio="aspect-[4/3]"
+                      onEnlarge={
+                        study.certificateUrl
+                          ? () => window.open(study.certificateUrl, "_blank", "noreferrer")
+                          : () => setEnlarged(study.certificate ?? null)
+                      }
+                    />
+                  </div>
+                </div>
+                )}
                 {study.achievements.length > 0 && (
                 <ul className="grid gap-px self-start bg-border">
                   {study.achievements.map((entry) => (
@@ -442,11 +461,12 @@ export function ProjectCaseStudy({
                           <OrdinalText text={line} />
                         </p>
                       ))}
-
                     </li>
                   ))}
                 </ul>
                 )}
+                {/* Certificate column — renders RIGHT when not certificateFirst (default) */}
+                {study.certificate && !study.certificateFirst && (
                 <div>
                   <p className="font-mono text-[10px] uppercase text-muted-foreground">
                     Certificate
@@ -463,6 +483,7 @@ export function ProjectCaseStudy({
                     />
                   </div>
                 </div>
+                )}
               </div>
             </Block>
             )}

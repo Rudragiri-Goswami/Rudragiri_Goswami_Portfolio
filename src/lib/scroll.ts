@@ -5,7 +5,7 @@
  * Every <Section> has py-16 sm:py-20 (64–80 px) of top padding INSIDE the
  * section container, plus a mb-10 heading block, before the visible heading
  * appears. Scrolling to the section container top therefore left 100+ px of
- * dead structural space above the first visible text — making the content
+ * dead structural space above the first visible text - making the content
  * feel "too low" with no room below.
  *
  * FIX:
@@ -16,7 +16,7 @@
  *
  * Why 32 px and not a viewport-fraction?
  * A viewport-fraction breathing room sounds right but overshoots on tall
- * screens — it adds too much space and the content still looks "low". A small
+ * screens - it adds too much space and the content still looks "low". A small
  * fixed gap after the navbar is the correct visual anchor: it puts the heading
  * reliably just below the navbar on every screen size.
  *
@@ -28,7 +28,7 @@
  *                    the heading. Default 32 px works well across all sections.
  */
 export function scrollToSection(sectionId: string, breathing = 32): void {
-  // Prefer the heading element — that is where visible content begins.
+  // Prefer the heading element - that is where visible content begins.
   const contentEl =
     document.getElementById(`${sectionId}-title`) ??
     document.getElementById(sectionId);

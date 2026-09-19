@@ -35,18 +35,18 @@ const outputs = [
 const impactResults = [
   {
     src: "/images/1vi/Force_vs_Time.png",
-    title: "Impact Force vs Time — 1 kg Impactor, 1 m Drop Height",
-    alt: "Impact Force vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
+    title: "Impact Force vs Time - 1 kg Impactor, 1 m Drop Height",
+    alt: "Impact Force vs Time Abaqus/Explicit result - 1 kg impactor, 1 m drop height",
   },
   {
     src: "/images/1vi/Energy_vs_Time.png",
-    title: "Energy Components vs Time — 1 kg Impactor, 1 m Drop Height",
-    alt: "Energy Components vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
+    title: "Energy Components vs Time - 1 kg Impactor, 1 m Drop Height",
+    alt: "Energy Components vs Time Abaqus/Explicit result - 1 kg impactor, 1 m drop height",
   },
   {
     src: "/images/1vi/Displacement_vs_Time.png",
-    title: "Displacement of Centre of Gravity vs Time — 1 kg Impactor, 1 m Drop Height",
-    alt: "Displacement of Centre of Gravity vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
+    title: "Displacement of Centre of Gravity vs Time - 1 kg Impactor, 1 m Drop Height",
+    alt: "Displacement of Centre of Gravity vs Time Abaqus/Explicit result - 1 kg impactor, 1 m drop height",
   },
 ];
 

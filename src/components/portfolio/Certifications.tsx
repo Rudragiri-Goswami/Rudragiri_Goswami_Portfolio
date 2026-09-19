@@ -1,8 +1,11 @@
 import * as React from "react";
 import type { Certification } from "@/content/portfolio";
+import { useOverlayScrollLock } from "@/hooks/use-overlay-scroll-lock";
 
 export function Certifications({ entries }: { entries: Certification[] }) {
   const [active, setActive] = React.useState<Certification | null>(null);
+
+  useOverlayScrollLock(Boolean(active));
 
   React.useEffect(() => {
     if (!active) return;
@@ -10,10 +13,8 @@ export function Certifications({ entries }: { entries: Certification[] }) {
       if (e.key === "Escape") setActive(null);
     };
     window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
     };
   }, [active]);
 
