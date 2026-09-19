@@ -7,9 +7,6 @@ import lowHighAsset from "@/assets/Low_z_vs_High_z_Enhanced.png.asset.json";
 import displacementTimeAsset from "@/assets/Displacement_vs_Time_1kg_1m.png.asset.json";
 import energyTimeAsset from "@/assets/Energy_vs_Time.png.asset.json";
 import forceTimeAsset from "@/assets/Force_vs_Time.png.asset.json";
-import baseInitialAsset from "@/assets/base1.glb.asset.json";
-import baseModifiedAsset from "@/assets/base_i2_f_fyp.glb.asset.json";
-import impactorAsset from "@/assets/impactorexr-2.glb.asset.json";
 import { Button } from "@/components/ui/button";
 import { CadViewer } from "./CadViewer";
 import { LoadingImage } from "./LoadingImage";
@@ -64,19 +61,19 @@ const fixtureCadModels = [
     id: "initial",
     label: "Initial Fixture Design",
     context: "Original fixture concept",
-    src: baseInitialAsset.url,
+    src: "/models/base1.glb",
   },
   {
     id: "modified",
     label: "Modified Fixture Design",
     context: "Final modular fixture configuration",
-    src: baseModifiedAsset.url,
+    src: "/models/base_i2_f_fyp.glb",
   },
   {
     id: "impactor",
     label: "Impactor Assembly",
     context: "Rigid impactor and loading assembly",
-    src: impactorAsset.url,
+    src: "/models/impactorexr.glb",
   },
 ];
 

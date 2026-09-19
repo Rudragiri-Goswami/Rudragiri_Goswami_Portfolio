@@ -1,9 +1,6 @@
 import { DetailNavigation } from "./DetailNavigation";
 import * as React from "react";
 import { CadViewer } from "./CadViewer";
-import legoModel from "@/assets/lego_exr.glb.asset.json";
-import magicBallModel from "@/assets/magic_ball_exr.glb.asset.json";
-import beamEngineModel from "@/assets/beam_engine_exr.glb.asset.json";
 import { useOverlayScrollLock } from "@/hooks/use-overlay-scroll-lock";
 
 const reports = {
@@ -113,8 +110,8 @@ function Report({ href }: { href: string }) {
 
 function AdditiveDetail() {
   const models = [
-    { id: "lego", label: "Lego Minifigure", name: "LEGO Minifigure", src: legoModel.url },
-    { id: "ball", label: "Magic Ball", name: "Magic Ball", src: magicBallModel.url },
+    { id: "lego", label: "Lego Minifigure", name: "LEGO Minifigure", src: "/models/lego_exr.glb" },
+    { id: "ball", label: "Magic Ball", name: "Magic Ball", src: "/models/magic_ball_exr.glb" },
   ];
   const [active, setActive] = React.useState(models[0]!.id);
   const current = models.find((model) => model.id === active) ?? models[0]!;
@@ -197,7 +194,7 @@ function MachinesDetail() {
 
       <Block title="CAD model">
         <CadViewer
-          src={beamEngineModel.url}
+          src="/models/beam_engine_exr.glb"
           title="Beam Engine"
           viewportClassName={VIEWPORT}
           loadingLabel="Loading 3D CAD..."

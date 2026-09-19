@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CadViewer } from "@/components/portfolio/CadViewer";
 import { OrdinalText } from "@/components/portfolio/OrdinalText";
-import aarModel from "@/assets/AAR.glb.asset.json";
 
 export const Route = createFileRoute("/projects/aar")({
   component: AarPage,
@@ -166,7 +165,7 @@ function AarPage() {
 
           <Block title="CAD MODEL">
             <CadViewer
-              src={aarModel.url}
+              src="/models/AAR.glb"
               title="AAR CAD Model"
               loadingLabel="Loading CAD Model..."
               emptyLabel="CAD model coming soon"

@@ -2,7 +2,6 @@ import { DetailNavigation } from "@/components/portfolio/DetailNavigation";
 import type { ReactNode } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CadViewer } from "@/components/portfolio/CadViewer";
-import swachModel from "@/assets/swach_exr_final.glb.asset.json";
 
 export const Route = createFileRoute("/projects/swach")({
   component: SwachPage,
@@ -33,7 +32,8 @@ export const Route = createFileRoute("/projects/swach")({
   }),
 });
 
-const swachModelUrl: string | undefined = swachModel.url;
+// The model is a Vercel static asset, not a Lovable-only /__l5e URL.
+const swachModelUrl = "/models/swach_ex_r5.0.glb";
 const swachDocumentationUrl =
   "https://drive.google.com/file/d/1qf69qUAa4l9ZY_lWVmI7rZpCddKuqWYz/view?usp=drive_link";
 

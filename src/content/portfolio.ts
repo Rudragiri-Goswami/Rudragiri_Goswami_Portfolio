@@ -17,8 +17,6 @@ import pathfinderFrontView from "@/assets/pathfinder-front-view.jpg.asset.json";
 import pathfinderSideView from "@/assets/pathfinder-side-view.jpg.asset.json";
 import pathfinderThreeQuarterView from "@/assets/pathfinder-three-quarter-view.jpg.asset.json";
 import lineFollowerAbstract from "@/assets/robonovices-line-follower-abstract.pdf.asset.json";
-import radiaxIterationOneModel from "@/assets/AGV_I1_PF.glb.asset.json";
-import radiaxIterationTwoModel from "@/assets/AGV_I1_F.glb.asset.json";
 import stabiloIsometric from "@/assets/stabilo-isometric.png.asset.json";
 import stabiloFront from "@/assets/stabilo-front.png.asset.json";
 import stabiloTop from "@/assets/stabilo-top.png.asset.json";
@@ -555,8 +553,9 @@ export type ShowcaseProject = {
 };
 
 /** RADIAX - CDN URLs of the GLB CAD models for each design iteration. */
-export const radiaxIterationOneModelUrl: string = radiaxIterationOneModel.url;
-export const radiaxIterationTwoModelUrl: string = radiaxIterationTwoModel.url;
+// GLB files live in public/models so these root-relative URLs work from every route.
+export const radiaxIterationOneModelUrl = "/models/AGV_I1_PF.glb";
+export const radiaxIterationTwoModelUrl = "/models/AGV_I1_F.glb";
 /** RADIAX - technical documentation link once provided. */
 export const radiaxDocumentationUrl: string | undefined =
   "https://drive.google.com/file/d/1k7VhnCWHyE5CXYLapofIDBBYXNEa6ldD/view?usp=drive_link";
