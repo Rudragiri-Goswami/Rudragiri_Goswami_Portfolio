@@ -1,9 +1,6 @@
 import { DetailNavigation } from "./DetailNavigation";
 import * as React from "react";
 import { CarouselArrow } from "./CarouselArrow";
-import displacementTimeAsset from "@/assets/Displacement_vs_Time_1kg_1m.png.asset.json";
-import energyTimeAsset from "@/assets/Energy_vs_Time.png.asset.json";
-import forceTimeAsset from "@/assets/Force_vs_Time.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CadViewer } from "./CadViewer";
 import { LoadingImage } from "./LoadingImage";
@@ -37,19 +34,19 @@ const outputs = [
 
 const impactResults = [
   {
-    src: displacementTimeAsset.url,
-    title: "Displacement-Time graph",
-    alt: "Displacement-Time graph for varying impactor masses and drop heights",
+    src: "/images/1vi/Force_vs_Time.png",
+    title: "Impact Force vs Time — 1 kg Impactor, 1 m Drop Height",
+    alt: "Impact Force vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
   },
   {
-    src: energyTimeAsset.url,
-    title: "Energy-Time graph",
-    alt: "Energy-Time analysis graph",
+    src: "/images/1vi/Energy_vs_Time.png",
+    title: "Energy Components vs Time — 1 kg Impactor, 1 m Drop Height",
+    alt: "Energy Components vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
   },
   {
-    src: forceTimeAsset.url,
-    title: "Force-Time graph",
-    alt: "Force-Time analysis graph",
+    src: "/images/1vi/Displacement_vs_Time.png",
+    title: "Displacement of Centre of Gravity vs Time — 1 kg Impactor, 1 m Drop Height",
+    alt: "Displacement of Centre of Gravity vs Time Abaqus/Explicit result — 1 kg impactor, 1 m drop height",
   },
 ];
 
@@ -395,9 +392,9 @@ function TagList({ tags }: { tags: string[] }) {
 
 function DetailBlock({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div>
+    <div className="border-t border-border pt-8">
       <p className="section-kicker">{title}</p>
-      {children}
+      <div className="mt-4">{children}</div>
     </div>
   );
 }
@@ -642,9 +639,9 @@ export function ResearchAndInternshipExperience() {
               href="https://drive.google.com/file/d/1lLHOACjwFfkXJBp1fvmQDcigU-1QfJc_/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex bg-primary px-4 py-2 font-mono text-[11px] uppercase text-primary-foreground transition-opacity hover:opacity-85"
+              className="inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              Document
+              DOCUMENT ↗
             </a>
           </DetailBlock>
         </>

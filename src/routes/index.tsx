@@ -69,10 +69,13 @@ function Index() {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  const el = document.getElementById(item.href.slice(1));
+                  const id = item.href.slice(1);
+                  const el = document.getElementById(id);
+                  const navbar = document.querySelector("header");
+                  const navH = navbar ? navbar.getBoundingClientRect().height : 56;
                   if (el)
                     window.scrollTo({
-                      top: Math.max(el.getBoundingClientRect().top + window.scrollY - 64, 0),
+                      top: Math.max(el.getBoundingClientRect().top + window.scrollY - navH, 0),
                       behavior: "smooth",
                     });
                 }}
@@ -117,11 +120,14 @@ function Index() {
               href="#about"
               onClick={(e) => {
                 e.preventDefault();
-                const el = document.getElementById("about-title");
-                const navbarHeight = document.querySelector("header")?.getBoundingClientRect().height ?? 56;
+                // Match the ABOUT navbar click exactly: target section container,
+                // subtract only the navbar height, no extra breathing.
+                const el = document.getElementById("about");
+                const navbar = document.querySelector("header");
+                const navH = navbar ? navbar.getBoundingClientRect().height : 56;
                 if (el)
                   window.scrollTo({
-                    top: Math.max(el.getBoundingClientRect().top + window.scrollY - navbarHeight - 20, 0),
+                    top: Math.max(el.getBoundingClientRect().top + window.scrollY - navH, 0),
                     behavior: "smooth",
                   });
               }}
@@ -135,7 +141,7 @@ function Index() {
         {/* About */}
         <Section
           id="about"
-          className="pt-5 sm:pt-6"
+          className="pt-10 sm:pt-14"
           title={<span className="flex flex-col items-start"><span>About</span><span className="text-primary">Me</span></span>}
         >
           <div className="max-w-3xl space-y-5 text-justify text-base leading-relaxed text-muted-foreground sm:text-lg">

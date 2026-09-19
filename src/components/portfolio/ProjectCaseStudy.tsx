@@ -455,7 +455,11 @@ export function ProjectCaseStudy({
                     <ImageFrame
                       image={study.certificate ?? { caption: "Mindbend certificate pending" }}
                       ratio="aspect-[4/3]"
-                      onEnlarge={() => setEnlarged(study.certificate ?? null)}
+                      onEnlarge={
+                        study.certificateUrl
+                          ? () => window.open(study.certificateUrl, "_blank", "noreferrer")
+                          : () => setEnlarged(study.certificate ?? null)
+                      }
                     />
                   </div>
                 </div>
@@ -463,15 +467,29 @@ export function ProjectCaseStudy({
             </Block>
             )}
 
-            {study.documentation && (
+            {(study.documentation || study.cft) && (
               <Block title="Documentation">
-                <button
-                  type="button"
-                  onClick={() => setShowDoc(true)}
-                  className="inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                >
-                  {study.documentation.label} →
-                </button>
+                <div className="flex flex-wrap gap-3">
+                  {study.documentation && (
+                    <button
+                      type="button"
+                      onClick={() => setShowDoc(true)}
+                      className="inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {study.documentation.label} →
+                    </button>
+                  )}
+                  {study.cft && (
+                    <a
+                      href={study.cft.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      {study.cft.label} ↗
+                    </a>
+                  )}
+                </div>
               </Block>
             )}
 

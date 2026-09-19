@@ -7,22 +7,8 @@
  */
 
 import lineFollowerSideView from "@/assets/line-follower-side-view.jpg.asset.json";
-import lineFollowerBackView from "@/assets/line-follower-back-view.jpg.asset.json";
-import lineFollowerFrontView from "@/assets/line-follower-front-view.jpg.asset.json";
-import grpFinals from "@/assets/grp-2k24-finals.jpg.asset.json";
-import grpCelebrations from "@/assets/grp-2k24-celebrations.jpg.asset.json";
-import mindbendCertificate from "@/assets/mindbend-certificate.png.asset.json";
-import pathfinderCertificate from "@/assets/pathfinder-certificate.png.asset.json";
-import pathfinderFrontView from "@/assets/pathfinder-front-view.jpg.asset.json";
 import pathfinderSideView from "@/assets/pathfinder-side-view.jpg.asset.json";
-import pathfinderThreeQuarterView from "@/assets/pathfinder-three-quarter-view.jpg.asset.json";
 import lineFollowerAbstract from "@/assets/robonovices-line-follower-abstract.pdf.asset.json";
-import stabiloIsometric from "@/assets/stabilo-isometric.png.asset.json";
-import stabiloFront from "@/assets/stabilo-front.png.asset.json";
-import stabiloTop from "@/assets/stabilo-top.png.asset.json";
-import stabiloSide from "@/assets/stabilo-side.png.asset.json";
-import sentinelAlpha from "@/assets/S_Alpha.jpg.asset.json";
-import sentinelBeta from "@/assets/S_Beta.png.asset.json";
 
 
 
@@ -548,7 +534,11 @@ export type ShowcaseProject = {
     video?: { label: string; url: string };
     achievements: { event: string; lines: string[] }[];
     certificate?: GalleryImage;
+    /** When set, clicking the certificate preview opens this URL (e.g. Google Drive) in a new tab. */
+    certificateUrl?: string;
     documentation?: { label: string; url: string; embedUrl?: string };
+    /** External link (e.g. Google Drive) for a Completion/Participation certificate (CFT). */
+    cft?: { label: string; url: string };
   };
 };
 
@@ -602,9 +592,9 @@ export const showcaseProjects: ShowcaseProject[] = [
         "Developed and presented the Robot-as-a-Service (RaaS) concept; SENTINEL reached the NIDHI-PRAYAS (DST) finalist stage at IIT Gandhinagar.",
       ],
       gallery: {
-        primary: { src: sentinelAlpha.url, caption: "SENTINEL-Alpha (The Soil Analyst)", alt: "CAD render of SENTINEL-Alpha, the soil-analysis robot" },
+        primary: { src: "/images/sentinel/S_ALPHA.jpg", caption: "SENTINEL-Alpha — The Soil Analyst", alt: "CAD render of SENTINEL-Alpha, the soil-analysis robot" },
         supporting: [
-          { src: sentinelBeta.url, caption: "SENTINEL-Beta (The Planter)", alt: "CAD render of SENTINEL-Beta, the planting robot" },
+          { src: "/images/sentinel/S_BETA.png", caption: "SENTINEL-Beta — The Planter", alt: "CAD render of SENTINEL-Beta, the planting robot" },
         ],
       },
       galleryFit: "contain",
@@ -680,25 +670,21 @@ export const showcaseProjects: ShowcaseProject[] = [
       ],
       gallery: {
         primary: {
-          src: stabiloIsometric.url,
-          caption: "STABILO - Isometric View",
-          alt: "Isometric view of the fabricated STABILO rally car prototype",
+          src: "/images/stabilo/stabilo_1.png",
+          alt: "STABILO rally car prototype - photograph 1",
         },
         supporting: [
           {
-            src: stabiloFront.url,
-            caption: "STABILO - Front View",
-            alt: "Front view of the fabricated STABILO rally car prototype",
+            src: "/images/stabilo/stabilo_2.png",
+            alt: "STABILO rally car prototype - photograph 2",
           },
           {
-            src: stabiloTop.url,
-            caption: "STABILO - Top View",
-            alt: "Top view of the STABILO chassis and fabricated components",
+            src: "/images/stabilo/stabilo_3.png",
+            alt: "STABILO rally car prototype - photograph 3",
           },
           {
-            src: stabiloSide.url,
-            caption: "STABILO - Side View",
-            alt: "Side view of the STABILO wheels and suspension assembly",
+            src: "/images/stabilo/stabilo_4.png",
+            alt: "STABILO rally car prototype - photograph 4",
           },
         ],
       },
@@ -755,25 +741,25 @@ export const showcaseProjects: ShowcaseProject[] = [
       ],
       gallery: {
         primary: {
-          src: lineFollowerSideView.url,
-          alt: "Side view of the complete Line Follower Robot showing the Arduino Uno, L293D driver board and wiring",
+          src: "/images/line-follower/lf_1.jpg",
+          alt: "Autonomous Line Follower Robot - photograph 1",
         },
         supporting: [
           {
-            src: lineFollowerBackView.url,
-            alt: "Back view of the Line Follower Robot with the Robo Novices GJ05 team label",
+            src: "/images/line-follower/lf_2.jpg",
+            alt: "Autonomous Line Follower Robot - photograph 2",
           },
           {
-            src: lineFollowerFrontView.url,
-            alt: "Front view of the Line Follower Robot showing the IR sensor array",
+            src: "/images/line-follower/lf_3.jpg",
+            alt: "Autonomous Line Follower Robot - photograph 3",
           },
           {
-            src: grpFinals.url,
+            src: "/images/line-follower/grp_2k24_finals.jpg",
             caption: "Grand Robo-Prix (GRP) 2K24 Finals",
             alt: "Team RoboNovices with their robots during the Grand Robo-Prix (GRP) 2K24 Finals",
           },
           {
-            src: grpCelebrations.url,
+            src: "/images/line-follower/grp_2k24_celebrations.jpg",
             caption: "Grand Robo-Prix (GRP) 2K24 Celebrations",
             alt: "Team RoboNovices with the Grand Robo-Prix (GRP) 2K24 winner trophy in front of the DRISHTI sign",
           },
@@ -796,7 +782,7 @@ export const showcaseProjects: ShowcaseProject[] = [
 
       ],
       certificate: {
-        src: mindbendCertificate.url,
+        src: "/images/certificates/mindbend_certificate_lf.jpg",
         caption: "Mindbend 2024 Certificate",
         alt: "Certificate of Appreciation for participating in the Line Follower event at Mindbend 2024, SVNIT Surat",
       },
@@ -805,6 +791,10 @@ export const showcaseProjects: ShowcaseProject[] = [
         url: lineFollowerAbstract.url,
         embedUrl:
           "https://drive.google.com/file/d/1j_mIGrRmKaWGbeXVyb1MYZqXDC9VWlet/preview",
+      },
+      cft: {
+        label: "CFT — Line Follower",
+        url: "https://drive.google.com/file/d/1jXchj9yE7X4t8AADi3tHUPi_JV3pLDJo/view?usp=drive_link",
       },
 
     },
@@ -843,23 +833,31 @@ export const showcaseProjects: ShowcaseProject[] = [
       ],
       gallery: {
         primary: {
-          src: pathfinderSideView.url,
-          alt: "Pathfinder Robot side view showing the Arduino Uno, HC-SR04 ultrasonic sensors, motor driver board and wheels",
+          src: "/images/pathfinder/pathfinder_1.jpg",
+          alt: "Pathfinder Robot - three-quarter view showing Arduino Uno, HC-SR04 sensors and wiring",
         },
         supporting: [
           {
-            src: pathfinderFrontView.url,
-            alt: "Front view of the Pathfinder Robot with the HC-SR04 ultrasonic sensor array",
+            src: "/images/pathfinder/pathfinder_2.jpg",
+            alt: "Pathfinder Robot - side and front angle showing motor driver board and wheels",
           },
           {
-            src: pathfinderThreeQuarterView.url,
-            alt: "Three-quarter view of the Pathfinder Robot showing the sensor array, Arduino Uno and wiring",
+            src: "/images/pathfinder/pathfinder_3.jpg",
+            alt: "Pathfinder Robot - front-facing view showing HC-SR04 ultrasonic sensor array",
           },
         ],
       },
-      achievements: [],
+      achievements: [
+        {
+          event: "Mindbend 2024",
+          lines: [
+            "5th place among 40+ Teams",
+            "Gujarat's Largest Techno-Managerial Fest",
+          ],
+        },
+      ],
       certificate: {
-        src: pathfinderCertificate.url,
+        src: "/images/certificates/mindbend_certificate_pathfinder.jpg",
         caption: "Mindbend 2024 Certificate",
         alt: "Certificate of Appreciation for participating in the Pathfinder event at Mindbend 2024, SVNIT Surat",
       },
