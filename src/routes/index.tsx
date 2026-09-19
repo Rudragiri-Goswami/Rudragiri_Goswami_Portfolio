@@ -174,13 +174,17 @@ function Index() {
           kicker="Projects"
           title="Robotics"
           aside="Scroll horizontally · open a card for the full case study"
-          fullScreen
+          className="min-h-[calc(100svh-3.5rem)] py-10 sm:py-12"
         >
           <ProjectShowcase projects={orderedShowcaseProjects} />
         </Section>
 
         {/* Achievements */}
-        <Section id="achievements" title="Achievements" fullScreen>
+        <Section
+          id="achievements"
+          title="Achievements"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center"
+        >
           <ol className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {achievements.map((item) => (
               <li key={item.title} className="bg-background p-6 sm:p-7">
@@ -214,7 +218,12 @@ function Index() {
         </Section>
 
         {/* Education */}
-        <Section id="education" kicker="Education" title="Academic Record">
+        <Section
+          id="education"
+          kicker="Education"
+          title="Academic Record"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center"
+        >
           <div className="grid gap-10 md:grid-cols-12 md:gap-8">
             {/* Featured qualification */}
             <div className="md:col-span-5">
@@ -326,7 +335,12 @@ function Index() {
         </Section>
 
         {/* Certifications */}
-        <Section id="certifications" kicker="Professional Credentials" title="Certifications">
+        <Section
+          id="certifications"
+          kicker="Professional Credentials"
+          title="Certifications"
+          className="min-h-[calc(100svh-3.5rem)]"
+        >
           <Certifications entries={certifications} />
         </Section>
 
