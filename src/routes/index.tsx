@@ -141,7 +141,6 @@ function Index() {
         {/* About */}
         <Section
           id="about"
-          className="pt-10 sm:pt-14"
           title={<span className="flex flex-col items-start"><span>About</span><span className="text-primary">Me</span></span>}
         >
           <div className="max-w-3xl space-y-5 text-justify text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -175,12 +174,13 @@ function Index() {
           kicker="Projects"
           title="Robotics"
           aside="Scroll horizontally · open a card for the full case study"
+          fullScreen
         >
           <ProjectShowcase projects={orderedShowcaseProjects} />
         </Section>
 
         {/* Achievements */}
-        <Section id="achievements" title="Achievements">
+        <Section id="achievements" title="Achievements" fullScreen>
           <ol className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {achievements.map((item) => (
               <li key={item.title} className="bg-background p-6 sm:p-7">
@@ -332,12 +332,12 @@ function Index() {
 
         {/* Contact */}
 
-        <section id="contact" aria-labelledby="contact-title" className="scroll-mt-20 py-20">
+        <section id="contact" aria-labelledby="contact-title" className="scroll-mt-14 border-b border-border py-16 sm:py-20">
           <div className="max-w-3xl">
             <p className="section-kicker">Contact</p>
             <h2
               id="contact-title"
-              className="mt-5 text-4xl font-extrabold leading-none sm:text-5xl"
+              className="mt-3 text-4xl font-extrabold leading-none sm:text-5xl"
             >
               Let's Engineer what’s next.
             </h2>
