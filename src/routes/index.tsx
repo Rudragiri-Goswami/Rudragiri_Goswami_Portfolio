@@ -174,7 +174,8 @@ function Index() {
           kicker="Projects"
           title="Robotics"
           aside="Scroll horizontally · open a card for the full case study"
-          className="min-h-[calc(100svh-3.5rem)] py-10 sm:py-12"
+          className="py-8 sm:py-10 pb-14 sm:pb-16"
+          compact
         >
           <ProjectShowcase projects={orderedShowcaseProjects} />
         </Section>
@@ -183,7 +184,7 @@ function Index() {
         <Section
           id="achievements"
           title="Achievements"
-          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center py-12 sm:py-14"
         >
           <ol className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {achievements.map((item) => (
@@ -212,7 +213,6 @@ function Index() {
           id="positions"
           kicker="Leadership & extracurriculars"
           title="Positions of Responsibility"
-          aside={`${positions.length} organisations`}
         >
           <Positions entries={positions} />
         </Section>
@@ -222,7 +222,7 @@ function Index() {
           id="education"
           kicker="Education"
           title="Academic Record"
-          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col justify-center py-12 sm:py-14"
         >
           <div className="grid gap-10 md:grid-cols-12 md:gap-8">
             {/* Featured qualification */}
@@ -339,7 +339,7 @@ function Index() {
           id="certifications"
           kicker="Professional Credentials"
           title="Certifications"
-          className="min-h-[calc(100svh-3.5rem)]"
+          className="flex min-h-[calc(100svh-3.5rem)] flex-col py-10 sm:py-12"
         >
           <Certifications entries={certifications} />
         </Section>

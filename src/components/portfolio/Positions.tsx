@@ -9,7 +9,7 @@ export function Positions({ entries }: { entries: PositionEntry[] }) {
   return (
     <ol className="relative border-l border-border pl-6 sm:pl-10">
       {entries.map((entry) => (
-        <li key={entry.id} className="relative pb-14 last:pb-0">
+        <li key={entry.id} className="relative pb-20 last:pb-0">
           <span
             aria-hidden="true"
             className="absolute -left-[calc(1.5rem+4.5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-primary sm:-left-[calc(2.5rem+4.5px)]"

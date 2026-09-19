@@ -8,6 +8,7 @@ export function Section({
   aside,
   children,
   className,
+  compact = false,
 }: {
   id?: string;
   kicker?: string;
@@ -15,6 +16,8 @@ export function Section({
   aside?: ReactNode;
   children: ReactNode;
   className?: string;
+  /** Tightens the heading-to-content gap for sections where content needs more vertical room. */
+  compact?: boolean;
 }) {
   const reactId = useId();
   const headingId = `${id ?? reactId}-title`;
@@ -25,7 +28,7 @@ export function Section({
       aria-labelledby={headingId}
       className={cn("scroll-mt-14 border-b border-border py-16 sm:py-20", className)}
     >
-      <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+      <div className={cn("flex flex-wrap items-end justify-between gap-4", compact ? "mb-6" : "mb-10")}>
         <div>
           {kicker && <p className="section-kicker">{kicker}</p>}
           <h2 id={headingId} className="mt-3 text-3xl font-bold sm:text-4xl">

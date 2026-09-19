@@ -21,7 +21,7 @@ export function Certifications({ entries }: { entries: Certification[] }) {
     <>
       <ol className="relative border-l border-border pl-6 sm:pl-8">
         {entries.map((certification) => (
-          <li key={certification.id} className="relative pb-10 last:pb-0">
+          <li key={certification.id} className="relative pb-5 last:pb-0">
             <span
               aria-hidden="true"
               className="absolute -left-[calc(1.5rem+5px)] top-1.5 h-2.5 w-2.5 rounded-full bg-primary sm:-left-[calc(2rem+5px)]"
@@ -43,7 +43,7 @@ export function Certifications({ entries }: { entries: Certification[] }) {
             <button
               type="button"
               onClick={() => setActive(certification)}
-              className="mt-4 inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              className="mt-3 inline-block border border-primary/60 px-4 py-2 font-mono text-[11px] uppercase text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               View Certificate →
             </button>
