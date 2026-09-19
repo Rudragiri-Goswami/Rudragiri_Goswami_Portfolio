@@ -1,9 +1,6 @@
 import { DetailNavigation } from "./DetailNavigation";
 import * as React from "react";
 import { CarouselArrow } from "./CarouselArrow";
-import hubbleDiagramAsset from "@/assets/Hubble_Dgm_Enhanced.png.asset.json";
-import hubbleResidualsAsset from "@/assets/Hubble_Residuals_vs_Redshift_Enhanced.png.asset.json";
-import lowHighAsset from "@/assets/Low_z_vs_High_z_Enhanced.png.asset.json";
 import displacementTimeAsset from "@/assets/Displacement_vs_Time_1kg_1m.png.asset.json";
 import energyTimeAsset from "@/assets/Energy_vs_Time.png.asset.json";
 import forceTimeAsset from "@/assets/Force_vs_Time.png.asset.json";
@@ -25,15 +22,15 @@ import { useOverlayScrollLock } from "@/hooks/use-overlay-scroll-lock";
 
 const outputs = [
   {
-    src: hubbleDiagramAsset.url,
+    src: "/images/isa/Hubble_Dgm_Enhanced.png",
     title: "Hubble Diagram",
   },
   {
-    src: hubbleResidualsAsset.url,
+    src: "/images/isa/Hubble_Residuals_vs_Redshift_Enhanced.png",
     title: "Hubble Residuals vs Redshift",
   },
   {
-    src: lowHighAsset.url,
+    src: "/images/isa/Low_z_vs_High_z_Enhanced.png",
     title: "Low-z vs High-z Hubble Diagram with Fit",
   },
 ];
