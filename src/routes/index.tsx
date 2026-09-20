@@ -94,6 +94,14 @@ function Index() {
               </a>
             ))}
             <a
+              href="https://drive.google.com/file/d/12z8JYpFUlH7gMdY0jhhlyfLaoWXEOVbM/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary px-3 py-2 font-medium text-primary transition-opacity hover:opacity-85"
+            >
+              CV
+            </a>
+            <a
               href={RESUME_URL}
               target="_blank"
               rel="noreferrer"
