@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AtSign, Linkedin, Phone } from "lucide-react";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1ARk7t-DKg4gUeSjHCAt1qJhacHejvF1R/view?usp=drive_link";
+  "https://drive.google.com/file/d/1uLX40wcBff5RFNAqkEh0VZ2I_zoHDdj_/view?usp=drive_link";
 const orderedShowcaseProjects = [...showcaseProjects].sort((a, b) => {
   if (a.id === "pathfinder" && b.id === "line-follower") return -1;
   if (a.id === "line-follower" && b.id === "pathfinder") return 1;

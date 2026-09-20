@@ -435,7 +435,7 @@ export const achievements: {
   },
   {
     title: "Institute Rank 1 - Grand Robo-Prix (GRP) 2024",
-    organization: "DRISHTI - A REVOLUTIONARY CONCEPT, SVNIT Surat",
+    organization: "DRISHTI - A Revolutionary Concept, SVNIT Surat",
     description: "Autonomous Line Follower Robot",
   },
   {
@@ -546,8 +546,8 @@ export type ShowcaseProject = {
 
 /** RADIAX - CDN URLs of the GLB CAD models for each design iteration. */
 // GLB files live in public/models so these root-relative URLs work from every route.
-export const radiaxIterationOneModelUrl = "/models/AGV_I1_PF.glb";
-export const radiaxIterationTwoModelUrl = "/models/AGV_I1_F.glb";
+export const radiaxIterationOneModelUrl = "/models/AGV_I1_F.glb";
+export const radiaxIterationTwoModelUrl = "/models/AGV_I1_PF.glb";
 /** RADIAX - technical documentation link once provided. */
 export const radiaxDocumentationUrl: string | undefined =
   "https://drive.google.com/file/d/1k7VhnCWHyE5CXYLapofIDBBYXNEa6ldD/view?usp=drive_link";
@@ -556,7 +556,7 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     id: "sentinel",
     title: "SENTINEL - Dual Robotic System for Land Restoration and Afforestation",
-    teamLine: "DRISHTI - Robotics Club, SVNIT | Team Innovation",
+    teamLine: "TEAM INNOVATION | Team Lead | DRISHTI - A Revolutionary Concept",
     overview:
       "A dual-robotic system comprising SENTINEL-Alpha (The Soil Analyst) and SENTINEL-Beta (The Planter), developed to support land restoration and afforestation through soil assessment, targeted plantation, nutrient delivery, and sustainable land-management practices.",
     tags: ["Robotics", "Mechanism Design", "System Architecture", "Land Restoration", "Afforestation", "Sustainable Agriculture", "AI/ML", "RaaS"],
@@ -620,7 +620,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     id: "aar",
     title: "AAR: Autonomous Agricultural Robot for Precision Farming",
     badge: "GUJCOST Proposal",
-    teamLine: "Team DRISHTI | Team Lead",
+    teamLine: "TEAM INNOVATION | Team Lead | DRISHTI - A Revolutionary Concept",
     overview:
       "AAR is an autonomous agricultural robot designed for precision farming, integrating soil sensing, autonomous navigation, targeted spraying, and structured field traversal to support data-driven and resource-efficient agricultural operations.",
     tags: ["Precision Farming", "Autonomous Navigation", "Soil Sensing", "Targeted Spraying"],
@@ -634,7 +634,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     id: "radiax",
     title: "RADIAX: Automated Guided Vehicle (AGV) for Radiopharmaceutical Material Handling",
     badge: "GUJCOST Proposal",
-    teamLine: "Team DRISHTI | Technical Member",
+    teamLine: "TEAM INNOVATION | DRISHTI - A Revolutionary Concept",
     overview:
       "A proposed compact Automated Guided Vehicle (AGV) designed for the safe and precise transportation of radioactive vials and lead-shielded radiopharmaceutical containers within controlled radiopharmacy environments.",
     tags: ["AGV", "Mechanical Design", "ROS 2", "Mecanum Drive"],
@@ -645,7 +645,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     id: "swach",
     title: "SWACH: Smart Waste Autonomous Collector and Handler",
     badge: "GUJCOST Proposal",
-    teamLine: "Team DRISHTI | Technical Member",
+    teamLine: "TEAM INNOVATION | DRISHTI - A Revolutionary Concept",
     overview:
       "SWACH (Smart Waste Autonomous Collector and Handler) is an innovative solar-powered autonomous waste management robot designed for automated waste collection and handling in public and community spaces. The system integrates waste detection, autonomous navigation, collection, segregation, and disposal, with camera and sensor-based perception and solar-assisted power management.",
     tags: ["Waste Collection", "Waste Segregation", "Autonomous Navigation", "Solar Power"],
@@ -655,10 +655,10 @@ export const showcaseProjects: ShowcaseProject[] = [
   {
     id: "stabilo",
     title: "STABILO - Rally Car Suspension System",
-    teamLine: "MAKERNOVA 2.0 · DRISHTI, SVNIT",
-    event: "MAKERNOVA 2.0 · DRISHTI, SVNIT",
+    teamLine: "MAKERNOVA 2.0 · DRISHTI - A Revolutionary Concept",
+    event: "MAKERNOVA 2.0 · DRISHTI - A Revolutionary Concept",
     overview:
-      "STABILO, a model rally car featuring a non-Grashof four-bar coil spring suspension, was designed and fabricated as part of MAKERNOVA 2.0 conducted by DRISHTI, SVNIT. The prototype had overall dimensions of 300 × 260 × 98 mm (wheelbase × track width × ground clearance), with a 420 × 170 mm chassis and a 2.45 N/mm spring constant.",
+      "STABILO, a model rally car featuring a non-Grashof four-bar coil spring suspension, was designed and fabricated as part of MAKERNOVA 2.0 conducted by DRISHTI - Robotics Club, SVNIT. The prototype had overall dimensions of 300 × 260 × 98 mm (wheelbase × track width × ground clearance), with a 420 × 170 mm chassis and a 2.45 N/mm spring constant.",
     tags: [
       "SolidWorks",
       "CAD Design",
@@ -670,7 +670,7 @@ export const showcaseProjects: ShowcaseProject[] = [
     achievementPreview: [],
     caseStudy: {
       overview: [
-        "STABILO, a model rally car featuring a non-Grashof four-bar coil spring suspension, was designed and fabricated as part of MAKERNOVA 2.0 conducted by DRISHTI, SVNIT. The prototype had overall dimensions of 300 × 260 × 98 mm (wheelbase × track width × ground clearance), with a 420 × 170 mm chassis and a 2.45 N/mm spring constant.",
+        "STABILO, a model rally car featuring a non-Grashof four-bar coil spring suspension, was designed and fabricated as part of MAKERNOVA 2.0 conducted by DRISHTI - Robotics Club, SVNIT. The prototype had overall dimensions of 300 × 260 × 98 mm (wheelbase × track width × ground clearance), with a 420 × 170 mm chassis and a 2.45 N/mm spring constant.",
       ],
       technicalDescription:
         "The team developed an independent, passive, double-wishbone-inspired suspension architecture based on a non-Grashof four-bar linkage, using coil springs for passive load support and shock absorption. Multiple CAD variants were explored during design selection, considering mechanism feasibility, wheel movement, structural integrity, and manufacturability, before fabrication and physical testing.",
@@ -804,10 +804,6 @@ export const showcaseProjects: ShowcaseProject[] = [
         url: lineFollowerAbstract.url,
         embedUrl:
           "https://drive.google.com/file/d/1j_mIGrRmKaWGbeXVyb1MYZqXDC9VWlet/preview",
-      },
-      cft: {
-        label: "CFT - Line Follower",
-        url: "https://drive.google.com/file/d/1jXchj9yE7X4t8AADi3tHUPi_JV3pLDJo/view?usp=drive_link",
       },
 
     },

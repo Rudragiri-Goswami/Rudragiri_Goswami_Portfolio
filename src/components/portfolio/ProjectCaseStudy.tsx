@@ -425,7 +425,7 @@ export function ProjectCaseStudy({
             {(study.achievements.length > 0 || study.certificate) && (
             <Block title="Competition achievements">
               <div className="grid gap-6 lg:grid-cols-2">
-                {/* Certificate column — renders LEFT when certificateFirst, otherwise RIGHT */}
+                {/* Certificate column - renders LEFT when certificateFirst, otherwise RIGHT */}
                 {study.certificate && study.certificateFirst && (
                 <div>
                   <p className="font-mono text-[10px] uppercase text-muted-foreground">
@@ -465,7 +465,7 @@ export function ProjectCaseStudy({
                   ))}
                 </ul>
                 )}
-                {/* Certificate column — renders RIGHT when not certificateFirst (default) */}
+                {/* Certificate column - renders RIGHT when not certificateFirst (default) */}
                 {study.certificate && !study.certificateFirst && (
                 <div>
                   <p className="font-mono text-[10px] uppercase text-muted-foreground">
