@@ -367,7 +367,6 @@ export const researchExperience: ResearchEntry[] = [
       "Contributed to the experimental development and process validation of a solar-assisted floral waste valorisation system focused on dual-product recovery, combining floral hydrosol extraction with the utilisation of residual biomass for natural dhoop production.",
     technicalDetails: [
       "Assisted in experimental trials involving forced-convection drying and floral hydrosol extraction, using Pt-100 RTDs, STC-3028 humidity sensors, a Testo 405i anemometer, and mass-based moisture measurements.",
-      "Applied psychrometric analysis, moisture-ratio calculations, and drying-kinetics analysis to interpret temperature, relative humidity, air velocity, and moisture-content data, contributing to the reported 94.71% drying efficiency.",
       "Supported the validation of residual biomass utilisation for natural dhoop production, demonstrating a waste-to-value conversion pathway through sustainable biomass valorisation.",
     ],
   },
